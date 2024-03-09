@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  list-style: none;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 20px 20px;
+  box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+.logo a span {
+  color: #252525;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu li {
+  position: relative;
+}
+.menu a {
+  display: block;
+  padding: 7px 15px;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.2s all ease-in-out;
+  color: #000000;
+}
+.menu a:hover {
+  opacity: 1;
+  color: #2f2f2f;
+  font-weight: 600;
+}
+.menu .dropdown {
+  display: inline-block;
+}
+.menu .dropdown .dropbtn {
+  padding: 7px 15px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #000000;
+  cursor: pointer;
+}
+.menu .dropdown .dropbtn:hover {
+  opacity: 1;
+  color: #2f2f2f;
+  font-weight: 600;
+}
+.menu .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f7ff;
+  min-width: 100px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.menu .dropdown .dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+}
+.menu .dropdown .dropdown-content a:hover {
+  background-color: #ddd;
+}
+.menu .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.menu-icon {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .menu {
+  transform: scale(1, 1);
+}
+
+@media only screen and (max-width: 950px) {
+  .menu {
+    flex-direction: column;
+    background-color: #ffffff;
+    align-items: start;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-top: 25px;
+  }
+  .menu a {
+    margin-left: 35px;
+  }
+  .menu li {
+    margin-bottom: 10px;
+  }
+  .menu-icon {
+    display: block;
+    color: #000000;
+    font-size: 28px;
+    cursor: pointer;
+  }
+}
+.container {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.container .section1 {
+  flex: 1;
+  max-width: 600px;
+  padding-right: 20px;
+}
+.container .section1 .heading {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.container .section1 .para {
+  font-size: small;
+  margin-bottom: 20px;
+  color: #b9b9b9;
+}
+.container .section1 .btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Adjust as needed */
+}
+.container .section1 .btn .btn1,
+.container .section1 .btn .btn2 {
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.container .section1 .btn .btn1 {
+  background-color: #39c3fa;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+}
+.container .section1 .btn .btn2 {
+  background-color: #f9f7ff;
+  color: #000;
+  border: 1px solid #000000;
+  border-radius: 8px;
+}
+.container .section1 .logo {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1px;
+  margin-top: 15px;
+}
+.container .section1 .logo .logo1 {
+  display: flex;
+  padding: 10px;
+  font-size: 25px;
+  color: #b9b9b9;
+}
+.container .section1 .logo .logo1 i {
+  margin-right: 5px;
+  color: #b9b9b9;
+}
+.container .section2 {
+  max-width: 600px;
+}
+.container .section2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 768px) {
+  .container .section2 {
+    margin-top: 50px;
+  }
+  .container .heading {
+    font-size: 30px !important;
+  }
+  .container .para {
+    font-size: 10px !important;
+  }
+  .container .section1 .btn {
+    justify-content: center;
+    gap: 1rem;
+  }
+  .container .section1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .container .logo {
+    justify-content: center !important;
+  }
+}
+
+.container_1 {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5rem !important;
+  justify-content: center;
+}
+.container_1 .span_text {
+  color: #39c3fa;
+}
+.container_1 .heading_text {
+  font-size: 50px;
+}
+.container_1 .para {
+  color: #b9b9b9;
+}
+@media only screen and (max-width: 645px) {
+  .container_1 {
+    margin: 0;
+  }
+  .container_1 .heading_text {
+    font-size: 30px !important;
+  }
+  .container_1 .para {
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+.container_2 {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5rem !important;
+  justify-content: center;
+}
+.container_2 .sec1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px;
+}
+.container_2 .sec1 .span_text {
+  color: #39c3fa;
+  margin-bottom: 1rem;
+}
+.container_2 .sec1 .heading_text {
+  font-size: 50px;
+  margin-bottom: 1rem;
+}
+.container_2 .sec1 .list-text .list-flex {
+  display: flex;
+  align-items: center !important;
+  gap: 12px;
+  justify-content: start;
+  margin-bottom: 1.2rem;
+}
+.container_2 .sec1 .list-text .fa-circle-check {
+  color: rgb(50, 255, 50);
+  font-size: 35px;
+}
+.container_2 .sec1 .list-text .para {
+  font-size: small;
+  color: #b9b9b9;
+  font-weight: 500;
+}
+.container_2 .sec1 .list-text .list-btn button {
+  background-color: #39c3fa;
+}
+.container_2 .sec2 {
+  max-width: 600px;
+}
+.container_2 .sec2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 768px) {
+  .container_2 .sec1 {
+    text-align: center;
+  }
+  .container_2 .sec1 .heading_text {
+    font-size: 25px !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
